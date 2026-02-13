@@ -12,6 +12,14 @@ public class PhaseManager : MonoBehaviour
 
     [Header("Debug Info")]
     public PhaseColor currentPhase = PhaseColor.Red;
+    
+    [Header("Camera Info")]
+    public Camera cam;
+
+    [Header("Color Info")] 
+    public Color RedColor;
+    public Color BlueColor;
+    public Color YellowColor;
 
     void Start()
     {
@@ -27,16 +35,19 @@ public class PhaseManager : MonoBehaviour
         if (Keyboard.current.jKey.wasPressedThisFrame)
         {
             SwitchPhase(PhaseColor.Red);
+            cam.backgroundColor = RedColor;
         }
         // K = Switch to Blue
         else if (Keyboard.current.kKey.wasPressedThisFrame)
         {
             SwitchPhase(PhaseColor.Blue);
+            cam.backgroundColor = BlueColor;
         }
         // L = Switch to Yellow
         else if (Keyboard.current.lKey.wasPressedThisFrame)
         {
             SwitchPhase(PhaseColor.Yellow);
+            cam.backgroundColor = YellowColor;
         }
     }
 

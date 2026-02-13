@@ -46,7 +46,7 @@ public class PhaseObject : MonoBehaviour
         {
             // STATE: GHOST (Inactive)
             myCollider.enabled = false;
-            SetAlpha(0.1f);
+            SetAlpha(0.3f);
         }
     }
 
